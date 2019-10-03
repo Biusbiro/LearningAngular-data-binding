@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { AlertModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     DataBindingComponent
   ],
   imports: [
+    AlertModule.forRoot(),
     BrowserModule
   ],
   providers: [],
