@@ -1,0 +1,17 @@
+article{
+    padding: 20px
+}
+
+.jumbotron{
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: dimgray
+}
+
+.highLigth{
+    background-color: rgb(71, 71, 71);
+    color: rgb(175, 175, 175);
+    font-weight: bold;
+    border-radius: 20px;
+}

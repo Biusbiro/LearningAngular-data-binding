@@ -1,21 +1,58 @@
 <section class="property-binding">
     <article>
-        <h3>Data Biding</h3>
-        <p>String renderizada com interpolação {{ url }}</p>
-        <p>resultado de 1+1 é {{1+1}}</p>
-        <p>resultado de 1+1 é {{getValor()}}</p>
-        <p>resultado de 1+1 é {{cursoAngular ? "dois": "erro"}}</p>
+        <h3>Event Binding</h3>
+        <div>
+            <button class="btn btn-primary" (click)="clickButton()">Click Me</button>
+        </div>
+
+        <br>
+        <br>
+
+        <input type="text" 
+            (keyup)="onKeyUp($event)" 
+            (keyup.enter)="saveValue($event.target.value)"
+            (blur)="saveValue(fieldInput.value)"
+            class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-control"
+            #fieldInput/>
+        <br>
+        <br>
+        <div class="jumbotron">
+                Input Value: {{ actualValue }}
+        </div>
+
+        <div class="jumbotron">
+                Saved Value: {{ savedValue }}
+        </div>
+
+        <div class="jumbotron" 
+            (mouseover)="onMouseOverOut()"
+            (mouseout)="onMouseOverOut()"
+            [class.highLigth]="isMouseOver">
+                Set You Mouse Over HERE!
+        </div>
+
+    </article>
+    
+    <article>
+        <ul class="list-group">
+            <li class="list-group-item active">Data Biding</li>
+            <li class="list-group-item">String renderizada com interpolação {{ url }}</li>
+            <li class="list-group-item">resultado de 1+1 é {{1+1}}</li>
+            <li class="list-group-item">resultado de 1+1 é {{getValor()}}</li>
+            <li class="list-group-item">resultado de 1+1 é {{cursoAngular ? "dois": "erro"}}</li>
+        </ul>
     </article>
 
     <article>
         <h3>Property Binding</h3>
-        <img src="{{ urlImagem }}">
-        <img [src]="urlImagem">
+        <img src="{{ urlImagem }}" class="img-thumbnail">
+        <br>
+        <img [src]="urlImagem" class="img-thumbnail">
     </article>
 
     <article>
-        <h3>Class e Style Binding</h3>
-        <select #classe (change)="0">
+        <label for="SelectStile">Select Style</label>
+        <select #classe (change)="0" class="form-control" id="SelectStile">=
             <option value="alert-success">Sucesso</option>
             <option value="alert-info">Info</option>
             <option value="alert-warning">Alerta</option>
