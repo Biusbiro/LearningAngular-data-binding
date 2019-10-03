@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
@@ -13,6 +14,12 @@ export class DataBindingComponent implements OnInit {
   actualValue: string = '';
   savedValue: string = '';
   isMouseOver: boolean = false;
+  name: string = 'abc';
+
+  people: any = {
+    nome: '',
+    age: null
+  }
 
   getValor(){
     return 1+1;
@@ -27,7 +34,6 @@ export class DataBindingComponent implements OnInit {
   }
 
   onKeyUp(evento: KeyboardEvent){
-    console.log((<HTMLInputElement> event.target).value)
     this.actualValue = (event.target as HTMLInputElement).value
   }
 

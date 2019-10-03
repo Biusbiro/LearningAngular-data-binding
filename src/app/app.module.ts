@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -12,7 +13,8 @@ import { AlertModule } from 'ngx-bootstrap';
   ],
   imports: [
     AlertModule.forRoot(),
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
