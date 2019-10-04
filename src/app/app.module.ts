@@ -7,13 +7,15 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { AlertModule } from 'ngx-bootstrap';
 import { InputPropertyComponent } from './input-property/input-property.component';
 import { OutputPropertyComponent } from './output-property/output-property.component';
+import { CicloComponent } from './ciclo/ciclo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
     InputPropertyComponent,
-    OutputPropertyComponent
+    OutputPropertyComponent,
+    CicloComponent
   ],
   imports: [
     AlertModule.forRoot(),
